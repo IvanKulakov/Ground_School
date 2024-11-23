@@ -1,0 +1,121 @@
+@import "const";
+
+.button2_link{
+  text-decoration: none;
+}
+.button2_block{
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 236px;
+  height: 65px;
+  margin: 0 auto;
+  border: 1px solid $main-color5;
+  background: none;
+  cursor: pointer;
+  transition: all .5s;
+}
+.button2_block:hover{
+  box-shadow: 0 4px 12px 0 #0000004D;
+  transition: all .5s;
+}
+.button_2_rotate{
+  position: absolute;
+  transform: rotate(-5deg);
+  box-sizing: border-box;
+  border-radius: 236px;
+  height: 65px;
+  border: 2px solid $main-color5;
+  background: none;
+  transition: all .5s;
+}
+.button2_block:hover .button_2_rotate{
+  transform: rotate(0deg);
+  transition: all .5s;
+}
+.button2_text{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(1);
+  font-family: $font-family4;
+  font-weight: 700;
+  line-height: 15px;
+  color: $main-color5;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all .5s;
+}
+.button2_block:hover .button2_text{
+  transform:translate(-50%, -50%) scale(1.1);
+  transition: all .5s;
+}
+
+@media (min-width: 320px) {
+  .button2_block{
+    width: 300px;
+  }
+  .button_2_rotate{
+    width: 300px;
+  }
+  .button2_text{
+    font-size: 14px;
+  }
+}
+@media (min-width: 410px) {
+
+}
+@media (min-width: 510px) {
+
+}
+@media (min-width: 610px) {
+
+}
+@media (min-width: 710px) {
+
+}
+@media (min-width: 768px) {
+  .button2_block{
+    width: 340px;
+  }
+  .button_2_rotate{
+    width: 340px;
+  }
+  .button2_text{
+    font-size: 14px;
+  }
+}
+@media (min-width: 810px) {
+
+}
+@media (min-width: 910px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1010px) {
+
+}
+@media (min-width: 1110px) {
+
+}
+@media (min-width: 1210px) {
+  .button2_block{
+    width: 410px;
+  }
+  .button_2_rotate{
+    width: 410px;
+  }
+  .button2_text{
+    font-size: 15px;
+  }
+}
+@media (min-width: 1440px) {
+
+}
+@media (min-width: 1810px) {
+
+}
+@media (min-width: 1920px) {
+
+}

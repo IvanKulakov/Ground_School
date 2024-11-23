@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{ "title": "Контакти" })
+<body class="main">
+
+@@include('html/header.html',{
+"display" : "invisible",
+})
+<main class="contacts_background ourprograms_background">
+    <div class="wrapper2">
+
+    <div class="contact_input_block">
+            <div class="contact_input_content">
+                <p class="ourprograms_content_h1 contact_input_content_title">Навчаймося разом!</p>
+                <p class="ourprograms_content_text contact_input_content_text">
+                    З радістю проконсультуємо вас і розповімо всі деталі про навчання та умови перебування в нашому дитячому садочку! Для запису вашої дитини, пишіть на пошту
+                    <a class="contact_input_content_text" href="mailto:mammigraund@gmail.com">mammigraund@gmail.com</a>
+                    або заповнюйте форму на сайті. Наші фахівці завжди готові допомогти вам зробити правильний вибір для розвитку та комфорту вашої дитини!                </p>
+            </div>
+            <div class="input_block_contacts">
+                <div >
+                    <form>
+                        <div class="input_block_top">
+                            <input
+                                    class="input_style input_style_top"
+                                    type="text"
+                                    id="inputNameFooter"
+                                    placeholder="Ім’я*"
+                            />
+                            <input
+                                    class="input_style input_style_top"
+                                    type="tel"
+                                    id="inputTelFooter"
+                                    placeholder="Телефон*"
+                            />
+                        </div>
+                        <input
+                                class="input_style"
+                                type="email"
+                                id="inputEmailFooter"
+                                placeholder="Email (не обов'язково)"
+                        />
+                        <p class="input_block_text">Чим ми можемо Вам допомогти?</p>
+                        <input
+                                class="input_style"
+                                type="email"
+                                id="inputDataFooter"
+                                placeholder="Коротко опишіть..."
+                        />
+                    </form>
+                </div>
+                <button id="inputBtnFooter" class="contact_top_block_button">Надіслати</button>
+            </div>
+        </div>
+
+
+    </div>
+    <a id="map"></a>
+    <div class="contacts_map_box">
+        <iframe class="contacts_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.2985305841767!2d24.027368776605645!3d49.86202502196091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add00b7ea938d%3A0x5811b337c4203c79!2z0LLRg9C70LjRhtGPINCS0LXRgdC90Y_QvdCwLCAxOCwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1731939850406!5m2!1suk!2sua" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</main>
+
+
+@@include('html/footer.html',{
+"display1" : "invisible",
+})
+@@include('html/modal.html',{ })
+
+</body>
+<script src="js/app.min.js"></script>
+</html>

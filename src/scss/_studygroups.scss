@@ -1,0 +1,97 @@
+@import "const";
+
+
+.studygroups_items{
+  display: flex;
+  flex-wrap: wrap;
+}
+.studygroups_item{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.studygroups_items_img{
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 16px;
+}
+.studygroups_items_link{
+  font-size: 18px;
+  font-family: $font-family5;
+    font-weight: 500;
+  text-align: left;
+  color: $main-color8;
+  text-decoration: none;
+}
+
+
+@media (min-width: 320px) {
+  .studygroups_items_img{
+    max-width: 150px;
+  }
+  .studygroups_items{
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .studygroups_items_link{
+    font-size: 14px;
+  }
+
+}
+@media (min-width: 410px) {
+
+}
+@media (min-width: 510px) {
+
+}
+@media (min-width: 610px) {
+
+}
+@media (min-width: 710px) {
+
+}
+@media (min-width: 768px) {
+  .studygroups_items_img{
+    max-width: 220px;
+  }
+  .studygroups_items{
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .studygroups_items_link{
+    font-size: 18px;
+  }
+}
+@media (min-width: 810px) {
+
+}
+@media (min-width: 910px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1010px) {
+
+}
+@media (min-width: 1110px) {
+
+}
+@media (min-width: 1210px) {
+  .studygroups_items_img{
+    max-width: 280px;
+  }
+}
+@media (min-width: 1440px) {
+
+}
+@media (min-width: 1810px) {
+  .studygroups_items_img{
+    max-width: 310px;
+  }
+}
+@media (min-width: 1920px) {
+
+}

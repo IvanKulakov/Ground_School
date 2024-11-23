@@ -1,0 +1,89 @@
+@import "const";
+
+
+.ourphotos_img_block{
+  display: flex;
+  flex-wrap: wrap;
+}
+.ourphotos_img{
+  height: auto;
+  border-radius: 15px;
+}
+
+
+@media (min-width: 320px) {
+  .ourphotos_img{
+    max-width: 150px;
+  }
+  .ourphotos_img_block{
+    justify-content: center;
+    gap: 10px;
+  }
+  .ourphotos_background{
+    padding: 16px 0;
+  }
+
+}
+@media (min-width: 410px) {
+
+
+}
+@media (min-width: 510px) {
+
+}
+@media (min-width: 610px) {
+  .ourphotos_img{
+    max-width: 180px;
+  }
+
+}
+@media (min-width: 710px) {
+
+}
+@media (min-width: 768px) {
+  .ourphotos_img{
+    max-width: 220px;
+  }
+  .ourphotos_img_block{
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .ourphotos_background{
+    padding: 30px 0;
+  }
+}
+@media (min-width: 810px) {
+
+}
+@media (min-width: 910px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1010px) {
+
+}
+@media (min-width: 1110px) {
+
+}
+@media (min-width: 1210px) {
+  .ourphotos_img{
+    max-width: 280px;
+  }
+  .ourphotos_background{
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+
+}
+@media (min-width: 1810px) {
+  .ourphotos_img{
+    max-width: 310px;
+  }
+}
+@media (min-width: 1920px) {
+
+}

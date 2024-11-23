@@ -1,0 +1,163 @@
+@import "const";
+
+.main_block{
+  display: flex;
+}
+.main_img_block{
+  display: flex;
+  flex-direction: column;
+}
+.main_img_1{
+  margin-bottom: 34px;
+}
+.main_img_block_bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main_img_2{
+  max-width: 47%;
+}
+.main_content_block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_content_btn{
+  padding: 30px 46px;
+  font-family: $font-family4;
+  font-size: 15px;
+  font-weight: 700;
+  color: $main-color3;
+  border: 2px solid $main-color3;
+  width: fit-content;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .5s;
+}
+.main_content_btn:hover{
+  box-shadow: 0 4px 12px 0 #0000004D;
+  transition: all .5s;
+}
+
+
+.happy_background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.happy_items{
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 46px;
+}
+.happy_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  max-width:100%;
+}
+.happy_img{
+  margin-top: -10px;
+  border-radius: 50%;
+}
+
+
+@media (min-width: 320px) {
+  .main_block{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .happy_big{
+    display: none;
+  }
+  .happy_mob{
+    overflow: hidden;
+    min-width: 0;
+    max-width:100%;
+    padding-bottom: 14px;
+
+  }
+  .happy_img{
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (min-width: 410px) {
+
+}
+@media (min-width: 510px) {
+
+}
+@media (min-width: 610px) {
+
+}
+@media (min-width: 710px) {
+  .happy_img{
+    width: 200px;
+    height: 200px;
+  }
+  .main_block{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main_img_block{
+    max-width: 50%;
+  }
+  .main_content_block{
+    margin-left: 20px;
+  }
+  .happy_big{
+    display: flex;
+  }
+  .happy_mob{
+    display: none;
+  }
+
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 810px) {
+
+}
+@media (min-width: 910px) {
+  .happy_img{
+    width: 260px;
+    height: 260px;
+  }
+  .main_content_block{
+    margin-left: 60px;
+  }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1010px) {
+
+}
+@media (min-width: 1110px) {
+  .happy_img{
+    width: 330px;
+    height: 330px;
+  }
+}
+@media (min-width: 1210px) {
+
+}
+@media (min-width: 1440px) {
+  .main_content_block{
+    margin-left: 80px;
+  }
+}
+@media (min-width: 1810px) {
+  .happy_img{
+    width: 370px;
+    height: 370px;
+  }
+}
+@media (min-width: 1920px) {
+
+}
