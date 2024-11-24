@@ -17,7 +17,7 @@ const sendToTelegram = (data,  customer, telephone, email) => {
         }
         const token = '7887530120:AAGi57Qrcc09VjbgP1gIv6FG6aTGC1uPLyc';
         const chatId = '-4525344981';
-        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text= Сповіщення сайту школи Ім'я ${customer}, телефон ${telephone}, email ${email}, ${data}`;
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text= Сповіщення сайту ШКОЛИ %0A%0A Ім'я ${customer},%0A телефон ${telephone},%0A email ${email},%0A ${data}`;
         const xhttp = new XMLHttpRequest();
         xhttp.open('GET', url, true);
         xhttp.send();
