@@ -1,3 +1,34 @@
+const answerWindow = document.getElementById('answer');
+const openAns = () => {
+    answerWindow.classList.add('modal-active');
+    document.body.classList.add('main_hidden');
+}
+const closedAns = () => {
+    answerWindow.classList.remove('modal-active');
+    document.body.classList.remove('main_hidden');
+}
+const sendToTelegram = (data,  customer, telephone, email) => {
+    if((telephone.length > 5) || (email.length > 5)) {
+        if(!email){
+            email = "email відсутній";
+        }
+        if(telephone.length < 5){
+            telephone = "відсутній";
+        }
+        const token = '7887530120:AAGi57Qrcc09VjbgP1gIv6FG6aTGC1uPLyc';
+        const chatId = '-4525344981';
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text= Сповіщення сайту школи Ім'я ${customer}, телефон ${telephone}, email ${email}, ${data}`;
+        const xhttp = new XMLHttpRequest();
+        xhttp.open('GET', url, true);
+        xhttp.send();
+        openAns();
+        setTimeout(closedAns, 1500)
+
+    }
+};
+// https://api.telegram.org/bot7887530120:AAGi57Qrcc09VjbgP1gIv6FG6aTGC1uPLyc/getUpdates
+
+
 //fancybox start
 try{
     Fancybox.bind("[data-fancybox]", {
@@ -57,11 +88,9 @@ try{
 catch (e){
     console.log(e)
 }
-
 //swiper1 end
 
-
-//swiper11 start
+//swiper1 start
 try{
     const slider3 = document.querySelector('.swiper2');
     const sl3 = new Swiper(slider3,{
@@ -77,7 +106,6 @@ try{
 catch (e){
     console.log(e)
 }
-
 //swiper1 end
 
 
@@ -130,7 +158,6 @@ catch (e){
 try{
     const burgerMenuOpenBTN = document.getElementById('burger-menu-open');
     const burgerMenu = document.getElementById('burger-menu');
-    const burgerMenuStickOpen = document.getElementById('open-burger-stick-menu');
     const line1 = document.getElementById('header-burger_line_1')
     const line2 = document.getElementById('header-burger_line_2')
     const line3 = document.getElementById('header-burger_line_3')
@@ -151,8 +178,6 @@ try{
     }
     window.addEventListener('scroll', closeBurger)
     burgerMenuOpenBTN.addEventListener('click', openBurger);
-    // burgerMenuCloseBTN.addEventListener('click', closeBurger);
-    // burgerMenuStickOpen.addEventListener('click', openBurger);
 }
 catch (e)
 {
@@ -184,7 +209,11 @@ try {
     const closed = function (event) {
         event.preventDefault();
         event.stopPropagation();
-        // sendToTelegram(userNameInput.value, userPhoneInput.value);
+        let age = `вік дитини не вказано`;
+        if (!!userNameAge.value){
+            age = `вік дитини ${userNameAge.value}`;
+        }
+        sendToTelegram(age, userNameInput.value, userPhoneInput.value );
         userNameInput.value = "";
         userPhoneInput.value = "";
         userNameAge.value = "";
@@ -222,3 +251,42 @@ catch (e){
     console.log(e)
 }
 //modal block end
+
+//footer send block start
+try{
+    const inputNameFooter = document.getElementById('inputNameFooter');
+    const inputTelFooter = document.getElementById('inputTelFooter');
+    const inputEMailFooter = document.getElementById('inputEmailFooter');
+    const inputDataFooter = document.getElementById('inputDataFooter');
+    const inputBtnFooter = document.getElementById('inputBtnFooter');
+
+    const sendFooterData = function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        let about = `опис відсутній`;
+        if(!!inputDataFooter.value){
+            about = `опис: ${inputDataFooter.value}`
+        }
+        sendToTelegram(about, inputNameFooter.value, inputTelFooter.value, inputEMailFooter.value);
+        inputNameFooter.value = "";
+        inputTelFooter.value = "";
+        inputDataFooter.value = "";
+        inputEMailFooter.value = "";
+    }
+    inputTelFooter.addEventListener('focus', _ => {
+        if(!/^\+\d*$/.test(inputTelFooter.value))
+            inputTelFooter.value = '+38';
+
+    });
+    inputTelFooter.addEventListener('keypress', e => {
+        if(!/\d/.test(e.key)) {
+            e.preventDefault();
+        }
+    });
+    inputBtnFooter.addEventListener('click', sendFooterData);
+}
+catch (e) {
+    console.log(e)
+}
+
+//footer send block end
