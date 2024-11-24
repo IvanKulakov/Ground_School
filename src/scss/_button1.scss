@@ -25,6 +25,10 @@
   border: 2px solid $main-color5;
   color: $main-color5;
 }
+.button3_colors{
+  border: 2px solid $main-color3;
+  color: $main-color3;
+}
 .button1:hover{
   box-shadow: 0 4px 12px 0 #0000004D;
   transition: all .5s;

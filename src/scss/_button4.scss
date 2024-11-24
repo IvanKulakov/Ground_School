@@ -9,7 +9,7 @@
   box-sizing: border-box;
   border-radius: 236px;
   margin: 0 auto;
-  border: 1px solid $main-color1;
+  border: 1px solid $main-color3;
   background: none;
   cursor: pointer;
   transition: all .5s;
@@ -25,7 +25,7 @@
   transform: rotate(-5deg);
   box-sizing: border-box;
   border-radius: 236px;
-  border: 2px solid $main-color1;
+  border: 2px solid $main-color3;
   transition: all .5s;
   z-index: 1;
 }
@@ -41,7 +41,7 @@
   font-family: $font-family4;
   font-weight: 700;
   line-height: 15px;
-  color: $main-color1;
+  color: $main-color3;
   text-transform: uppercase;
   white-space: nowrap;
   transition: all .5s;
